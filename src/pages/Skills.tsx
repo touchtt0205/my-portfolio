@@ -120,7 +120,7 @@ const Skills: React.FC = () => {
                       whileHover={{ scale: 1.1 }}
                       className="flex flex-col items-center"
                     >
-                      <skill.Icon size={40} className="text-primary mb-2 hover:scale-110 transition-transform" />
+                      <skill.Icon size={35} className="text-primary mb-2 hover:scale-110 transition-transform" />
                       <span className="text-gray-700 font-medium text-sm">{skill.name}</span>
                     </motion.div>
                   ))}
