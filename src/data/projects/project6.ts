@@ -1,17 +1,31 @@
-import project6Img from '../../assets/p6.jpg';
+import project7Img from '../../assets/p7.jpg';
 
 export const project6 = {
-  id: 6,
-  title: 'Travel Booking App',
-  description: 'Comprehensive travel booking system with live availability.',
-  technologies: ['React Native', 'TypeScript', 'Firebase', 'Stripe'],
-  imageUrl: project6Img,
-  githubLink: 'https://github.com/yourusername/travel-app',
-  liveLink: 'https://travelbooking.com',
+  id: 7,
+  title: 'Nuclues Projects',
+  role: 'Fullstack Developer',
+  description: 'The system is designed to enhance the tourism experience of the Holng Him Khaw community.',
+  technologies: ['NestJS', 'MySQL', 'React', 'Tailwind'],
+  imageUrl: project7Img,
+  githubLink: '', 
+  liveLink: '',  
   fullDetails: {
-    background: 'Designed for booking travel itineraries with live data and payments.',
-    challenges: ['Live data updates for availability', 'Mobile-first design challenges', 'Secure payment gateway'],
-    solutions: ['Used Firebase for live updates', 'Optimized UI for React Native', 'Integrated Stripe for payments'],
-    lessons: ['Enhanced mobile development skills', 'Mastered real-time app design', 'Improved payment integration strategies'],
+    background: 'This project aims to enhance the tourism experience of the Holng Him Khaw community through a well-structured system.',
+    challenges: [
+      'Building a scalable API and database system',
+      'Implementing secure login and registration features',
+      'Designing an intuitive workshop booking and payment system',
+    ],
+    solutions: [
+      'Used NestJS for a robust and scalable backend',
+      'Implemented MySQL for reliable data storage',
+      'Built a responsive UI with React and Tailwind for seamless user experience',
+    ],
+    lessons: [
+      'Improved skills in API and database design',
+      'Gained experience in secure authentication systems',
+      'Learned to create scalable and modular front-end and back-end architecture',
+    ],
   },
+  status: 'In Progress', 
 };

@@ -2,16 +2,18 @@ import project1Img from '../../assets/p1.jpg';
 
 export const project1 = {
   id: 1,
-  title: 'Portfolio Website',
-  description: 'Responsive personal portfolio website built with React and Tailwind CSS.',
-  technologies: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
+  title: 'Art and Community',
+  role: 'Fullstack Developer',
+  description: 'Developed a platform for showcasing art where users can upload, buy, and sell artworks with features like payment systems, shopping carts, and ownership rights management.',
+  technologies: ['TypeScript', 'PostgREST', 'React', 'Tailwind'],
   imageUrl: project1Img,
-  githubLink: 'https://github.com/yourusername/portfolio',
-  liveLink: 'https://yourportfolio.com',
+  githubLink: 'https://github.com/yourusername/art-and-community',
+  liveLink: 'https://yourartcommunity.com',
   fullDetails: {
-    background: 'Created to showcase my professional journey and technical skills.',
-    challenges: ['Designing a responsive layout', 'Implementing smooth animations', 'Creating an intuitive user experience'],
-    solutions: ['Used Tailwind CSS for responsive design', 'Implemented Framer Motion for animations', 'Designed mobile-first approach'],
-    lessons: ['Improved skills in React and advanced CSS', 'Learned about user experience design', 'Enhanced portfolio presentation skills'],
+    background: 'A platform designed to connect artists and buyers, allowing seamless transactions and artwork management.',
+    challenges: ['Implementing payment systems', 'Designing an intuitive user interface', 'Managing artwork ownership rights'],
+    solutions: ['Used PostgREST for backend API integration', 'Tailwind CSS for responsive and sleek UI design', 'React for dynamic and interactive frontend'],
+    lessons: ['Enhanced full-stack development skills', 'Learned about payment gateway integration', 'Improved understanding of user rights management in applications'],
   },
+  status: 'Completed', 
 };

@@ -1,17 +1,19 @@
-import project3Img from '../../assets/p3.jpg';
+import project3Img from './images/Project3/IMG_5669.jpg';
 
 export const project3 = {
   id: 3,
-  title: 'Chat Application',
-  description: 'Real-time chat app with WebSocket integration.',
-  technologies: ['React', 'Socket.IO', 'Express', 'Tailwind'],
+  title: 'Game Upbeat',
+  role: 'Frontend and Backend Developer',
+  description: 'Designed and developed a strategy game where players input plans to conquer opposing cities, and the game executes based on the pre-defined strategies.',
+  technologies: ['Java', 'Spring', 'React'],
   imageUrl: project3Img,
-  githubLink: 'https://github.com/yourusername/chat-app',
-  liveLink: 'https://realtimechat.com',
+  githubLink: 'https://github.com/yourusername/game-upbeat',
+  liveLink: 'https://gameupbeat.com',
   fullDetails: {
-    background: 'Built for real-time communication with instant message delivery.',
-    challenges: ['Handling message latency', 'Building a scalable chat server', 'Creating a smooth UI'],
-    solutions: ['Used Socket.IO for WebSocket communication', 'Implemented lazy loading for messages', 'Designed intuitive chat UI'],
-    lessons: ['Mastered WebSocket and real-time messaging', 'Enhanced server-side optimization skills', 'Improved UX/UI design for chat apps'],
+    background: 'A strategy-based game allowing players to plan and execute actions to conquer cities, with a backend that processes the strategy and a dynamic frontend for player interaction.',
+    challenges: ['Implementing game logic for city conquest', 'Managing real-time strategy execution', 'Designing an engaging and intuitive game UI'],
+    solutions: ['Used Java and Spring for backend game logic', 'React for frontend to handle dynamic user interactions', 'Optimized real-time strategy processing on the backend'],
+    lessons: ['Enhanced skills in backend development with Spring', 'Gained experience in game logic and strategy execution', 'Improved React skills for building dynamic game UIs'],
   },
+  status: 'Completed', 
 };

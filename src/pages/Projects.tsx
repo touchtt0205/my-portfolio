@@ -14,14 +14,14 @@ const Projects: React.FC = () => {
   return (
     <section 
       id="projects" 
-      className="min-h-screen flex items-center justify-center py-16"
+      className="min-h-screen flex items-center justify-center py-16 bg-white"
     >
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12 text-primary"
+          className="text-4xl font-bold text-center mb-12 text-gray"
         >
           Projects
         </motion.h2>
@@ -29,39 +29,57 @@ const Projects: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <motion.div
-              key={project.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.5 }}
-              className="bg-white shadow-lg rounded-lg overflow-hidden"
-            >
-              <img 
-                src={project.imageUrl} 
-                alt={project.title} 
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
+            key={project.id}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full"
+          >
+            <img 
+              src={project.imageUrl} 
+              alt={project.title} 
+              className="w-full h-48 object-cover"
+            />
+            <div className="flex-1 p-6 flex flex-col justify-between">
+              <div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-4 bg-gray-100 inline-block px-2 py-0.5 rounded-full">{project.role}</p>
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <span 
                       key={index} 
-                      className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                      className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <button
-                  onClick={() => navigateToProjectDetail(project.id)}
-                  className="w-full bg-primary text-white py-2 rounded-lg hover:bg-blue-700 transition"
-                >
-                  View Details
-                </button>
               </div>
-            </motion.div>
+          
+              {/* Status Section */}
+              <p 
+                className={`text-gray-600 inline-block px-2 py-0.5 rounded-full
+                  ${project.status === 'Completed' ? 'text-green-500' : ''}
+                  ${project.status === 'In Progress' ? 'text-yellow-500' : ''}
+                `}
+              >
+                ● {project.status}
+              </p>
+            </div>
+          
+            {/* Ensure that the button is always at the bottom */}
+            <div className="p-6">
+              <button
+                onClick={() => navigateToProjectDetail(project.id)}
+                className="w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-700 transition"
+              >
+                View Details
+              </button>
+            </div>
+          </motion.div>
+          
           ))}
         </div>
       </div>

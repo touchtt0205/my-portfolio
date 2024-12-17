@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="text-white focus:outline-none"
           >
-            {isMobileMenuOpen ? <XIcon /> : <MenuIcon />}
+            {isMobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
           </button>
         </div>
 
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
                       text-left px-6 py-3 border-b last:border-b-0
                       transition-colors duration-300
                       ${activeSection === item.id 
-                        ? 'text-primary bg-blue-50' 
+                        ? 'text-gray bg-gray-600'  // More noticeable active color
                         : 'text-gray-400 hover:bg-gray-700'}
                     `}
                     whileTap={{ scale: 0.95 }}
@@ -108,6 +108,7 @@ const Navbar: React.FC = () => {
           )}
         </AnimatePresence>
       </nav>
+
     </>
   );
 };

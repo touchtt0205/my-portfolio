@@ -2,16 +2,18 @@ import project4Img from '../../assets/p4.png';
 
 export const project4 = {
   id: 4,
-  title: 'Task Management System',
-  description: 'Feature-rich task manager for team collaboration.',
-  technologies: ['React', 'Firebase', 'TypeScript', 'Material UI'],
+  title: 'Computer Architecture Project',
+  role: 'Assembly Developer',
+  description: 'Designed custom assembly instructions as part of a computer architecture project to support further system development.',
+  technologies: ['Java'],
   imageUrl: project4Img,
-  githubLink: 'https://github.com/yourusername/task-manager',
-  liveLink: 'https://taskmanager.com',
+  githubLink: 'https://github.com/yourusername/computer-architecture-project',
+  liveLink: 'https://computerarchitectureproject.com',
   fullDetails: {
-    background: 'Designed to help teams manage tasks and deadlines efficiently.',
-    challenges: ['Real-time task updates', 'Authentication management', 'User role-based access control'],
-    solutions: ['Used Firebase for real-time database', 'Implemented role-based permissions', 'Designed interactive drag-and-drop tasks'],
-    lessons: ['Learned Firebase Firestore integration', 'Enhanced UI/UX for productivity tools', 'Implemented robust authentication systems'],
+    background: 'Focused on developing custom assembly instructions to enhance a computer system’s architecture for future improvements.',
+    challenges: ['Designing efficient assembly instructions', 'Ensuring compatibility with existing system architecture', 'Optimizing performance of the custom instructions'],
+    solutions: ['Used Java for implementing and testing custom instructions', 'Optimized instruction design for efficient execution', 'Ensured system compatibility and future scalability'],
+    lessons: ['Improved understanding of computer architecture', 'Gained experience in assembly-level programming', 'Enhanced system optimization and performance skills'],
   },
+  status: 'Completed', 
 };

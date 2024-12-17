@@ -9,7 +9,6 @@ import {
   FaPhp, 
   FaLaravel, 
   FaGitAlt, 
-  
 } from 'react-icons/fa'; 
 import { 
   SiTypescript, 
@@ -17,68 +16,49 @@ import {
   SiNestjs, 
   SiKubernetes 
 } from "react-icons/si";
-
 import { 
   RiTailwindCssFill 
 } from "react-icons/ri";
-
 import { 
   DiMysql, 
   DiMongodb 
 } from "react-icons/di";
-
 import { 
   BiLogoPostgresql 
 } from "react-icons/bi";
-
-
 import { 
   FaUsers, 
   FaBox, 
   FaServer, 
   FaCode 
-} from 'react-icons/fa'; // Soft Skills Icons from react-icons
+} from 'react-icons/fa';
 
 type IconType = React.ComponentType<{ size?: number; className?: string }>;
 
-// Define the structure of technical skills
 interface SkillItem {
   name: string;
   Icon: IconType;
 }
 
 const Skills: React.FC = () => {
-  // Technical skills array
   const technicalSkills: SkillItem[] = [
-    // Languages
     { name: 'Python', Icon: FaPython },
     { name: 'Java', Icon: FaJava },
     { name: 'JavaScript', Icon: FaJsSquare },
     { name: 'TypeScript', Icon: SiTypescript },
     { name: 'PHP', Icon: FaPhp },
-
-    // Frameworks
     { name: 'Laravel', Icon: FaLaravel },
     { name: 'NestJS', Icon: SiNestjs },
-
-    // Database
     { name: 'MySQL', Icon: DiMysql },
     { name: 'PostgreSQL', Icon: BiLogoPostgresql },
     { name: 'MongoDB', Icon: DiMongodb },
-
-    // Web Development
     { name: 'ReactJS', Icon: FaReact },
-    { name: 'Tailwind CSS', Icon: RiTailwindCssFill },
-
-    // DevOps
+    { name: 'Tailwind', Icon: RiTailwindCssFill },
     { name: 'Docker', Icon: FaDocker },
     { name: 'Kubernetes', Icon: SiKubernetes },
-
-    // IoT
     { name: 'Arduino', Icon: SiArduino },
   ];
 
-  // Soft skills array
   const softSkills: { name: string; Icon: IconType }[] = [
     { name: 'Team Collaboration', Icon: FaUsers },
     { name: 'Problem Solving', Icon: FaGitAlt },
@@ -87,16 +67,57 @@ const Skills: React.FC = () => {
     { name: 'Quick Learning', Icon: FaCode }
   ];
 
+  const SkillCategory = ({ title, skills }: { title: string, skills: string[] }) => {
+    return (
+      <div className="mb-8">
+        <h4 className="text-xl font-semibold mb-4 text-center text-gray-600 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-16 after:h-0.5  ">
+          {title}
+        </h4>
+        <div className="grid grid-cols-3 gap-6 justify-items-center">
+          {technicalSkills
+            .filter(skill => skills.includes(skill.name))
+            .map((skill, index) => (
+              <motion.div 
+                key={index} 
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center group"
+              >
+                <div className="p-3 bg-white rounded-full shadow-md group-hover:shadow-lg transition-all duration-300">
+                  <skill.Icon 
+                    size={35} 
+                    className="text-navy group-hover:text-blue-600 transition-colors" 
+                  />
+                </div>
+                <span className="text-gray-700 font-medium text-sm mt-2 group-hover:text-blue-600 transition-colors">
+                  {skill.name}
+                </span>
+              </motion.div>
+            ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section 
+      id="skills" 
+      className="min-h-screen flex items-center justify-center py-16 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden"
+    >
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 pointer-events-none opacity-10">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gray-200 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2 
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12 text-primary"
+          className="text-4xl font-bold text-center mb-12 text-gray-800 relative"
         >
           Skills
+          {/* <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-blue-500 rounded-full"></span> */}
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -105,141 +126,37 @@ const Skills: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white rounded-xl shadow-lg p-8 transform transition-all hover:shadow-xl"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Technical Skills</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">Technical Skills</h3>
 
-            {/* Languages */}
-              <div className="mb-8">
-                <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">Languages</h4>
-                <div className="grid grid-cols-5 gap-6 justify-items-center">
-                  {technicalSkills.filter(skill => 
-                    ['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP'].includes(skill.name)
-                  ).map((skill, index) => (
-                    <motion.div 
-                      key={index} 
-                      whileHover={{ scale: 1.1 }}
-                      className="flex flex-col items-center"
-                    >
-                      <skill.Icon size={35} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                      <span className="text-gray-700 font-medium text-sm">{skill.name}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-
-
-            {/* Frameworks */}
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">Frameworks</h4>
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {technicalSkills.filter(skill => 
-                  ['Laravel', 'NestJS'].includes(skill.name)
-                ).map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center"
-                  >
-                    <skill.Icon size={30} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Database */}
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">Databases</h4>
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {technicalSkills.filter(skill => 
-                  ['MySQL', 'PostgreSQL', 'MongoDB'].includes(skill.name)
-                ).map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center"
-                  >
-                    <skill.Icon size={30} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* Web Development */}
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">Web Development</h4>
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {technicalSkills.filter(skill => 
-                  ['ReactJS', 'Tailwind CSS'].includes(skill.name)
-                ).map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center"
-                  >
-                    <skill.Icon size={30} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* DevOps */}
-            <div className="mb-8">
-              <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">DevOps</h4>
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {technicalSkills.filter(skill => 
-                  ['Docker', 'Kubernetes'].includes(skill.name)
-                ).map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center"
-                  >
-                    <skill.Icon size={30} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
-            {/* IoT */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-center text-gray-700">IoT</h4>
-              <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {technicalSkills.filter(skill => 
-                  ['Arduino', 'ESP32'].includes(skill.name)
-                ).map((skill, index) => (
-                  <motion.div 
-                    key={index} 
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center"
-                  >
-                    <skill.Icon size={30} className="text-primary mb-2 hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 font-medium">{skill.name}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <SkillCategory title="Languages" skills={['Python', 'Java', 'JavaScript', 'TypeScript', 'PHP']} />
+            <SkillCategory title="Frameworks" skills={['Laravel', 'NestJS']} />
+            <SkillCategory title="Databases" skills={['MySQL', 'PostgreSQL', 'MongoDB']} />
+            <SkillCategory title="Web Development" skills={['ReactJS', 'Tailwind']} />
+            <SkillCategory title="DevOps" skills={['Docker', 'Kubernetes']} />
+            <SkillCategory title="IoT" skills={['Arduino']} />
           </motion.div>
 
-          {/* Soft Skills */}
+          {/* Soft Skills Section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="bg-white rounded-xl shadow-lg p-8 transform transition-all hover:shadow-xl"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Soft Skills</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800">Soft Skills</h3>
+            <div className="grid grid-cols-2 gap-6">
               {softSkills.map((skill, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white shadow-md rounded-lg p-4 text-center"
+                  className="bg-gray-50 border border-gray-100 rounded-lg p-4 text-center group hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
-                  <skill.Icon className="mx-auto text-primary mb-2" size={24} />
-                  <p className="text-gray-700">{skill.name}</p>
+                  <div className="p-3 bg-white rounded-full inline-block mb-2 shadow-md group-hover:shadow-lg transition-all">
+                    <skill.Icon className="text-navy group-hover:text-blue-600 transition-colors" size={24} />
+                  </div>
+                  <p className="text-gray-700 group-hover:text-blue-800 transition-colors">{skill.name}</p>
                 </motion.div>
               ))}
             </div>

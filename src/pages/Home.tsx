@@ -44,10 +44,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Back to Top Button */}
-      <div className="fixed bottom-4 right-4">
+      <div className="fixed bottom-4 right-4 z-50">
         <a href="#welcome">
           <button 
-            className="bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition"
+            className="bg-gray text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700 transition"
           >
             ↑ Back to Top
           </button>
