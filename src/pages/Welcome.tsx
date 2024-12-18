@@ -1,18 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ChevronDownIcon } from 'lucide-react';
 
 const Welcome: React.FC = () => {
-  useEffect(() => {
-    // Scroll to About section after 3 seconds
-    const timer = setTimeout(() => {
-      const aboutSection = document.getElementById("about");
-      if (aboutSection) {
-        aboutSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 3000); // Scroll after 3 seconds
-
-    return () => clearTimeout(timer); // Cleanup timer if component is unmounted
-  }, []);
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section 
@@ -46,15 +41,15 @@ const Welcome: React.FC = () => {
         </p>
         
         <div className="flex justify-center items-center space-x-4">
-          <a 
-            href="#about" 
-            className="bg-white text-[#000000] px-6 py-3 rounded-lg hover:bg-gray-100 transition transform hover:scale-105 inline-block relative 
-            before:absolute before:inset-0 before:bg-white/20 before:scale-0 before:opacity-0 before:rounded-lg
+          <button 
+            onClick={scrollToAbout} 
+            className="bg-white text-[#000000] px-6 py-3 rounded-lg hover:bg-[#b22222] hover:text-white transition transform hover:scale-105 inline-block relative 
+            before:absolute before:inset-0 before:scale-0 before:opacity-0 before:rounded-lg
             hover:before:scale-100 hover:before:opacity-100 before:transition-all before:duration-300 group"
           >
             <span className="relative z-10">Learn More About Me</span>
-          </a>
-          
+          </button>
+
           {/* Animated scroll down indicator */}
           <div className="animate-bounce-slow opacity-70 flex items-center justify-center">
             <ChevronDownIcon 

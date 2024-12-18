@@ -79,22 +79,22 @@ const About: React.FC = () => {
 
         {/* Actions with Icons */}
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full">
-  <a 
-    href="../../public/sippakon-cv.pdf" 
-    target="_blank" 
-    className="w-full sm:w-auto flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-full text-lg sm:text-base hover:bg-gray-700 transition transform hover:scale-105 group"
-  >
-    <Download className="mr-2 group-hover:animate-bounce-slow" size={20} />
-    Download CV
-  </a>
-  <a 
-    href="#contact" 
-    className="w-full sm:w-auto flex items-center justify-center border-2 border-gray-800 text-gray-800 px-6 py-3 rounded-full text-lg sm:text-base hover:bg-gray-800 hover:text-white transition transform hover:scale-105 group"
-  >
-    <Send className="mr-2 group-hover:rotate-45 transition-transform" size={20} />
-    Contact Me
-  </a>
-</div>
+          <a 
+            href="../../public/sippakon-cv.pdf" 
+            target="_blank" 
+            className="w-full sm:w-auto flex items-center justify-center bg-[#333333] text-white px-6 py-3 rounded-full text-lg sm:text-base hover:bg-[#b22222] transition transform hover:scale-105 group"
+          >
+            <Download className="mr-2 group-hover:animate-bounce-slow" size={20} />
+            Download CV
+          </a>
+          <a 
+            href="#contact" 
+            className="w-full sm:w-auto flex items-center justify-center border-2 border-gray-800 text-gray-800 px-6 py-3 rounded-full text-lg sm:text-base hover:bg-[#333333] hover:text-white transition transform hover:scale-105 group"
+          >
+            <Send className="mr-2 group-hover:rotate-45 transition-transform" size={20} />
+            Contact Me
+          </a>
+        </div>
       </motion.div>
     </section>
   );

@@ -82,13 +82,13 @@ const Skills: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 className="flex flex-col items-center group"
               >
-                <div className="p-3 bg-white rounded-full shadow-md group-hover:shadow-lg transition-all duration-300">
+                <div className="p-3 bg-white rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300">
                   <skill.Icon 
                     size={35} 
-                    className="text-navy group-hover:text-blue-600 transition-colors" 
+                    className="text-navy group-hover:text-red-600 transition-colors" 
                   />
                 </div>
-                <span className="text-gray-700 font-medium text-sm mt-2 group-hover:text-blue-600 transition-colors">
+                <span className="text-gray-700 font-medium text-sm mt-2 group-hover:text-red-600 transition-colors">
                   {skill.name}
                 </span>
               </motion.div>
@@ -151,12 +151,12 @@ const Skills: React.FC = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gray-50 border border-gray-100 rounded-lg p-4 text-center group hover:bg-blue-50 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="bg-gray-50 border border-gray-100 rounded-lg p-4 text-center group hover:bg-red-50 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <div className="p-3 bg-white rounded-full inline-block mb-2 shadow-md group-hover:shadow-lg transition-all">
-                    <skill.Icon className="text-navy group-hover:text-blue-600 transition-colors" size={24} />
+                    <skill.Icon className="text-navy group-hover:text-red-600 transition-colors" size={24} />
                   </div>
-                  <p className="text-gray-700 group-hover:text-blue-800 transition-colors">{skill.name}</p>
+                  <p className="text-gray-700 group-hover:text-red-800 transition-colors">{skill.name}</p>
                 </motion.div>
               ))}
             </div>

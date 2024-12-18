@@ -59,15 +59,15 @@ const WorkExperience: React.FC = () => {
                 {/* Company Info */}
                 <div className="w-full md:w-1/3 mb-4 md:mb-0 md:pr-8">
                   <div className="flex items-center mb-3">
-                    <Briefcase className="mr-3 text-blue-600" size={24} />
+                    <Briefcase className="mr-3 text-[#b22222]" size={24} />
                     <h3 className="text-2xl font-semibold text-gray-800">{experience.company}</h3>
                   </div>
                   <div className="flex items-center text-gray-600 mb-2">
-                    <Code className="mr-3 text-blue-500" size={20} />
+                    <Code className="mr-3 text-[#b22222]" size={20} />
                     <p>{experience.position}</p>
                   </div>
                   <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar className="mr-3 text-blue-400" size={20} />
+                    <Calendar className="mr-3 text-[#b22222]" size={20} />
                     <p>{experience.duration}</p>
                   </div>
                 </div>
@@ -78,28 +78,28 @@ const WorkExperience: React.FC = () => {
                     {experience.description.map((desc, idx) => (
                       <li 
                         key={idx} 
-                        className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-blue-500 before:rounded-full"
+                        className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-[#b22222] before:rounded-full"
                       >
                         {desc}
                       </li>
                     ))}
                   </ul>
                   
-                  {experience.technologies.length > 0 && (
+                  {/* {experience.technologies.length > 0 && (
                     <div className="mt-4 pt-4 border-t border-gray-100">
                       <h4 className="text-sm font-semibold text-gray-600 mb-2">Technologies Used</h4>
                       <div className="flex flex-wrap gap-2">
                         {experience.technologies.map((tech, techIdx) => (
                           <span 
                             key={techIdx} 
-                            className="bg-blue-50 text-blue-700 text-xs px-3 py-1 rounded-full"
+                            className="bg-red-50 text-[#b22222] text-xs px-3 py-1 rounded-full"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </motion.div>

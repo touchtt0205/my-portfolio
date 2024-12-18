@@ -26,21 +26,21 @@ const Extracurricular: React.FC = () => {
       organization: 'National Tech Challenge',
       description: 'Assisted in the teaching of logic design and digital circuits. Supported students in lab exercises and provided guidance on circuit simulations and debugging.',
       icon: FaChalkboardTeacher,
-      date: 'August 2022'
+      date: 'June 2022 - October 2022'
     },
     {
-      title: 'Teacher Assistance - 261200 OBJECT-ORIENTED PROGRAMMING',
+      title: 'Teac-er Assistance - 261200 OBJECT-ORIENTED PROGRAMMING',
       organization: 'National Tech Challenge',
       description: 'Helped students understand key concepts of object-oriented programming. Assisted with coding assignments, debugging, and conducting review sessions.',
       icon: FaChalkboardTeacher,
-      date: 'Spring 2023'
+      date: 'Nov 2022 - Present'
     },
     {
       title: 'Teacher Assistance - 259201 COMP PROG FOR ENGINEERS',
       organization: 'National Tech Challenge',
       description: 'Provided support in teaching C programming for engineering students. Guided students through programming assignments and problem-solving techniques.',
       icon: FaChalkboardTeacher,
-      date: 'Fall 2023'
+      date: 'Nov 2022 - Present'
     }
   ];
 
@@ -80,15 +80,15 @@ const Extracurricular: React.FC = () => {
             >
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-blue-50 rounded-full mr-4 group-hover:bg-blue-100 transition-colors">
-                    <activity.icon className="w-6 h-6 text-blue-600 group-hover:text-blue-700 transition-colors" />
+                  <div className="p-3 bg-gray-50 rounded-full mr-4 group-hover:bg-red-100 transition-colors">
+                    <activity.icon className="w-6 h-6 text-gray-600 group-hover:text-[#b22222] transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 group-hover:text-blue-800 transition-colors">
+                    <h3 className="text-xl font-semibold text-gray-800 group-hover:text-[#b22222] transition-colors">
                       {activity.title}
                     </h3>
                     <div className="flex items-center text-sm text-gray-500 mt-1">
-                      <BookOpen className="mr-2 w-4 h-4 text-blue-500" />
+                      <BookOpen className="mr-2 w-4 h-4 text-gray-500" />
                       {activity.date}
                     </div>
                   </div>
@@ -99,13 +99,13 @@ const Extracurricular: React.FC = () => {
                 </p>
                 
                 <div className="flex items-center text-sm font-medium text-gray-600">
-                  <MapPin className="mr-2 w-4 h-4 text-blue-500" />
+                  <MapPin className="mr-2 w-4 h-4 text-gray-500" />
                   {activity.organization}
                 </div>
               </div>
               
               {/* Subtle hover effect */}
-              <div className="h-1 w-full bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+              <div className="h-1 w-full bg-red-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </motion.div>
           ))}
         </div>

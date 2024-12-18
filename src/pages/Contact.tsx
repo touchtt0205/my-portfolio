@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition-all"
           >
-            <div className="mb-4 flex justify-center text-blue-600">
+            <div className="mb-4 flex justify-center text-[#b22222]">
               <info.icon size={48} />
             </div>
             <h3 className="text-xl font-semibold text-gray-800 mb-2">{info.title}</h3>
@@ -99,7 +99,7 @@ const Contact: React.FC = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
-            className="text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-gray-700 hover:text-[#b22222] transition-colors"
           >
             <platform.icon size={40} />
           </motion.a>

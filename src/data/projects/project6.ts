@@ -26,6 +26,7 @@ export const project6 = {
       'Gained experience in secure authentication systems',
       'Learned to create scalable and modular front-end and back-end architecture',
     ],
+    features: [{}],
   },
   status: 'In Progress', 
 };

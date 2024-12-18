@@ -73,7 +73,7 @@ const Projects: React.FC = () => {
             <div className="p-6">
               <button
                 onClick={() => navigateToProjectDetail(project.id)}
-                className="w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-700 transition"
+                className="w-full bg-[#333333] text-white py-2 rounded-lg hover:bg-[#b22222] transition"
               >
                 View Details
               </button>

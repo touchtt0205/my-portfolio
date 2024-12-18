@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       <div className="fixed bottom-4 right-4 z-50">
         <a href="#welcome">
           <button 
-            className="bg-gray text-white px-4 py-2 rounded-full shadow-lg hover:bg-gray-700 transition"
+            className="bg-gray text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#b22222] transition"
           >
             ↑ Back to Top
           </button>
