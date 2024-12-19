@@ -31,7 +31,6 @@ export const project5 = {
         subFeatures: [
           {
             title: 'Circuit Optimization',
-            description: 'Enhanced the circuit layout by reducing redundant logic gates, improving performance and minimizing latency.',
             imageUrl: circuit2,
           },
         ],

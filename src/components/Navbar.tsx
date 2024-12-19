@@ -1,23 +1,30 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuIcon, XIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState('about');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
-    { id: 'about', label: 'About Me' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'work', label: 'Work Experience' },
-    { id: 'extra', label: 'Extracurricular' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'about', label: 'About Me', path: '/' },
+    { id: 'skills', label: 'Skills', path: '/' },
+    { id: 'projects', label: 'Projects', path: '/' },
+    { id: 'work', label: 'Work Experience', path: '/' },
+    { id: 'extra', label: 'Extracurricular', path: '/' },
+    { id: 'contact', label: 'Contact', path: '/' }
   ];
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, path: string) => {
+    // Change route to the appropriate path
+    navigate(path);
+    
+    // Scroll to the specific section
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+    
     setActiveSection(sectionId);
     setIsMobileMenuOpen(false);
   };
@@ -48,7 +55,7 @@ const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <motion.button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.id, item.path)}
                 className={`
                   text-sm font-medium transition-colors duration-300
                   ${activeSection === item.id 
@@ -90,7 +97,7 @@ const Navbar: React.FC = () => {
                 {navItems.map((item) => (
                   <motion.button
                     key={item.id}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => scrollToSection(item.id, item.path)}
                     className={`
                       text-left px-6 py-3 border-b last:border-b-0
                       transition-colors duration-300
@@ -108,7 +115,6 @@ const Navbar: React.FC = () => {
           )}
         </AnimatePresence>
       </nav>
-
     </>
   );
 };

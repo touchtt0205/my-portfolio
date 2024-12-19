@@ -19,7 +19,7 @@ export const project1 = {
   title: 'Art and Community',
   role: 'Fullstack Developer',
   description: 'Developed a platform for showcasing art where users can upload, buy, and sell artworks with features like payment systems, shopping carts, and ownership rights management.',
-  technologies: ['TypeScript', 'PostgREST', 'React', 'Tailwind'],
+  technologies: ['TypeScript', 'PostgREST', 'React', 'Tailwind' ,'Docker','Cypress'],
   imageUrl: project1Img,
   githubLink: 'https://github.com/SUPATKN/Art-and-Community.git',
   fullDetails: {
@@ -30,23 +30,21 @@ export const project1 = {
     features: [
       {
         title: 'Payment System',
-        description: 'Implemented a secure payment system allowing users to buy and sell artwork directly on the platform.',
+        description: 'The top-up system will require the admin to verify that the user has actually made the payment by checking the attached receipt provided by the user.',
         startTitle: 'User Top-up',
         imageUrl: usertopup,
         subFeatures: [
           {
             title: 'Admin manage top-up',
-            description: 'All payments are encrypted using Stripe API.',
             imageUrl: subFeatureImg1,
           },
           {
             title: 'User Withdraw',
-            description: 'Support for PayPal, credit cards, and bank transfers.',
+            description: 'The withdrawal system works similarly, where users are required to upload a receipt or provide the payment transfer details for the admin to process the transaction.',
             imageUrl: subFeatureImg2,
           },
           {
             title: 'Admin manage withdraw',
-            description: 'Support for PayPal, credit cards, and bank transfers.',
             imageUrl: subFeatureImg3,
           },
         ],
@@ -59,45 +57,41 @@ export const project1 = {
         subFeatures: [
           {
             title: 'Admin Dashboard',
-            description: 'All tags are encrypted using AWS S3.',
+            description: 'The admin dashboard will be a page that manages everything related to users.',
             imageUrl: admindashboard,
           }],
       },
       {
         title: 'Upload System',
-        description: 'Created a user-friendly dashboard for managing artwork uploads, purchases, and sales.',
+        description: 'Created a user-friendly Upload for managing artwork uploads',
         startTitle:'Upload Image',
         imageUrl: uploadimage,
         subFeatures: [{
           title: 'Upload Slip',
-          description: 'All slips are encrypted using AWS S3.',
           imageUrl: uploadslip,
         }],
       },
       {
         title: 'Tags',
-        description: 'Created a user-friendly dashboard for managing artwork uploads, purchases, and sales.',
+        description: 'We created tags to make it easier for users to search for or filter images they are interested in.',
         startTitle:'Search by Tag',
         imageUrl: searchbytags,
         subFeatures: [{
           title: 'Admin manage tags',
-          description: 'All tags are encrypted using AWS S3.',
           imageUrl: managetag,
         }],
       },
       {
         title: 'Login/Register',
-        description: 'Created a user-friendly dashboard for managing artwork uploads, purchases, and sales.',
+        description: 'There is a login/register system that allows users to sign up traditionally and also log in via Google.',
         startTitle:'Register Local',
         imageUrl: loginregisterlocal,
         subFeatures: [
           {
           title: 'Login Oauth and Local',
-          description: 'All users are encrypted using AWS Cognito.',
           imageUrl: loginOauth,
         },{
           title: 'OAuth Login',
-          description: 'All users are encrypted using AWS Cognito.',
           imageUrl: loginOauth2,
         }
       ],
