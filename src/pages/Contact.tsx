@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
     {
       icon: PhoneIcon,
       title: 'Phone',
-      content: '+66 864064203'
+      content: '+66 955093818'
     },
     {
       icon: MapPinIcon,

@@ -1,8 +1,10 @@
-import project7Img from '../../assets/p7.jpg';
-import swagger from './images/Project6/swgger.png';
-import er from './images/Project6/er-lhc.png';
+import project7Img from './images/Project6/dash.png';
+import swagger from './images/Project6/swagger.png';
+import er from './images/Project6/LHC_db.png';
 import figma1 from './images/Project6/figma-mobile.png';
 import figma2 from './images/Project6/figna-com.png';
+import admin from './images/Project6/admin.png'
+import owner from './images/Project6/owner.png'
 
 export const project6 = {
   id: 7,
@@ -54,7 +56,23 @@ export const project6 = {
           }
         ]
       },
+      {
+        title: 'User Dashboard',
+        startTitle: 'Mobile',
+        imageUrl: figma1,
+
+      },
+      {
+        title: 'Owner Dashboard',
+        imageUrl: owner,
+        
+      },
+      {
+        title: 'Admin Dashboard',
+        imageUrl: admin,
+        
+      },
     ],
   },
-  status: 'In Progress', 
+  status: 'Completed', 
 };
