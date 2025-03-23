@@ -59,7 +59,7 @@ export const project6 = {
       {
         title: 'User Dashboard',
         startTitle: 'Mobile',
-        imageUrl: figma1,
+        imageUrl: project7Img,
 
       },
       {
