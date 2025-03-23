@@ -58,7 +58,6 @@ export const project6 = {
       },
       {
         title: 'User Dashboard',
-        startTitle: 'Mobile',
         imageUrl: project7Img,
 
       },
